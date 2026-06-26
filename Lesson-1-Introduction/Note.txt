@@ -1,1 +1,36 @@
+İlk növbədə yazdığımız Java kodunu (.java faylını) kompüterin başa düşə biləcəyi formata çevirmək lazımdır.
+
+JDK-nın daxilində Javac adlı compiler var, o bizim yazdığımız kodu ilk növbədə yoxlayır, 
+əgər error yoxdursa binary file-a, başqa adı ilə executable file-a çevirir.
+
+Binary file (.class faylı), öz daxilində byte code-lar saxlayır.
+
+Əlavə Qeyd: Byte code maşın kodu (0-1) deyil, o sadəcə Java Compiler-ın başa düşəcəyi hərf və rəqəmlər ibarət bir formatdır.
+
+Daha sonra isə JRE daxilindəki Class Loader işə düşür, 
+həmin .class faylını və lazım olan kitabxanaları RAM-a yükləyir.
+
+Kod RAM-a yükləndikdən sonra Bytecode Verification işə düşür, kodun təhlükəsizliyi yoxlanır.
+
+
+Sonra isə JVM daxilindəki İnterpreter həmin byte kodunu sətir sətir oxuyur və maşın koduna çevirib işə salır. 
+Amma sürətli olsada hər dəfə eyni sətri təkrar təkrar oxuyub işə salır döngü baş verir.
+
+Buna görədə arxada JİT texnologiyası (Just-İn-Time Compiler) program işləyərkən arxa planda davamlı olaraq performansı izləyir.
+Əgər tez-tez təkrarlanan kod blokları varsa onları sadəcə 1 dəfə maşın koduna çevirib yaddaşa yazır.
+Hər dəfə lazım olanda maşın kodunu yaddaşdan oxuyub işə salır.
+
+
+Program işləyən zaman RAM-da davamlı olaraq yeni obyektlər və datalar yaranır.
+JVM daxilində olan Garbage Collector proqramda artıq lazım olmayan işi bitən obyektləri tapır və onları RAM-dan silir.
+
+
+=============================================================================================================================================
+
+
+Stack və Heap isə RAM-da yerləşən iki ayrı yaddaş sahəsidir.
+
+
+
+
 
