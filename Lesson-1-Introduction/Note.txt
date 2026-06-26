@@ -1,4 +1,6 @@
-İlk növbədə yazdığımız Java kodunu (.java faylını) kompüterin başa düşə biləcəyi formata çevirmək lazımdır.
+Javada yazdığımız kod başdan sona hansı proseslərdən keçir?
+
+İlk növbədə yazdığımız Java source kodunu (.java) kompüterin başa düşə biləcəyi formata çevirmək lazımdır.
 
 JDK-nın daxilində Javac adlı compiler var, o bizim yazdığımız kodu ilk növbədə yoxlayır, 
 əgər error yoxdursa binary file-a, başqa adı ilə executable file-a çevirir.
