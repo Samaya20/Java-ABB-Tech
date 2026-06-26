@@ -1,4 +1,4 @@
-Javada yazdığımız kod başdan sona hansı proseslərdən keçir?
+------- Javada yazdığımız kod başdan sona hansı proseslərdən keçir? --------
 
 İlk növbədə yazdığımız Java source kodunu (.java) kompüterin başa düşə biləcəyi formata çevirmək lazımdır.
 
@@ -29,7 +29,7 @@ JVM daxilində olan Garbage Collector proqramda artıq lazım olmayan işi bitə
 
 =============================================================================================================================================
 
-Stack və Heap-in fərqləri nədir?
+------- Stack və Heap-in fərqləri nədir? --------
 
 Stack və Heap RAM-da yerləşən iki ayrı yaddaş sahəsidir.
 
@@ -44,11 +44,19 @@ Bu adətən rekursiv funksiyalar yəni bitməyən döngü olanda yaranır.
 
 
 Heap yaddaş isə obyektlərin və dynamic variable-ların saxlanması üçün istifadə olunur.
-Hansıki new keywordu il' yaratdığımız obyektlər və bu obyektlərin içindəki instance variable-ları saxlayır.
+Hansıki new keywordu ilə yaratdığımız obyektlər və bu obyektlərin içindəki instance variable-ları saxlayır.
+Obyektlərin referans adresləri isə stackdə saxlanır, çünki adres stabil bir dəyərdir, primitive tipdə saxlanmalıdır.
 Lifecycle-ı uzun müddətlidir, obyektlərin işi bitsə belə heap-də qalmağa davam edir. 
 Nə zaman silinəcəklərinə Garbage Collector qərar verir.
 Sürəti zəifdir çünki datalara referans adreslər üzərindən dolayı yol ilə çatır.
 Əgər heap yaddaş dolarsa OutOfMemory xətası baş verir.
+
+
+===============================================================================================================================================
+
+--------- Primitive və Reference type-ların fərqi nədir? ------------
+
+
 
 
 
