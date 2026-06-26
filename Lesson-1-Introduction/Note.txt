@@ -29,8 +29,26 @@ JVM daxilində olan Garbage Collector proqramda artıq lazım olmayan işi bitə
 
 =============================================================================================================================================
 
+Stack və Heap-in fərqləri nədir?
 
-Stack və Heap isə RAM-da yerləşən iki ayrı yaddaş sahəsidir.
+Stack və Heap RAM-da yerləşən iki ayrı yaddaş sahəsidir.
+
+Stack yaddaş metodların çağırılması və local variable-ların saxlanması üçün istifadə olunur. 
+Primitiv data tiplərini saxlayır.
+Lifecycle-ı isə qısa müddətlidir, yəni hər hansısa bir metod çağırılanda onun üçün xüsusi stack (frame) açılır.
+CPU tərəfindən idarə olunur.
+İşi bitəndə həmin stack-i və ona aid lokal dəyişənləri RAM-dan silir. 
+Dataları sıralı şəkildə saxlayır deyə sürətlidir və LİFO (Last-İn-First-Out) prinsipindən istifadə edir.
+Əgər stack üçün ayrılan sahə dolarsa StackOverflow xətası baş verir.
+Bu adətən rekursiv funksiyalar yəni bitməyən döngü olanda yaranır. 
+
+
+Heap yaddaş isə obyektlərin və dynamic variable-ların saxlanması üçün istifadə olunur.
+Hansıki new keywordu il' yaratdığımız obyektlər və bu obyektlərin içindəki instance variable-ları saxlayır.
+Lifecycle-ı uzun müddətlidir, obyektlərin işi bitsə belə heap-də qalmağa davam edir. 
+Nə zaman silinəcəklərinə Garbage Collector qərar verir.
+Sürəti zəifdir çünki datalara referans adreslər üzərindən dolayı yol ilə çatır.
+Əgər heap yaddaş dolarsa OutOfMemory xətası baş verir.
 
 
 
