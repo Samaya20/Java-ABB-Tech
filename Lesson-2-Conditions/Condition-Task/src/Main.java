@@ -56,7 +56,7 @@ public class Main {
 
         // -----------------------------------------------
 
-        // int x = 10, y = 4; char op = '+'; — op dəyişəninə görə toplama, çıxma, vurma və bölmə əməliyyatı aparsın.
+        // 4. int x = 10, y = 4; char op = '+'; — op dəyişəninə görə toplama, çıxma, vurma və bölmə əməliyyatı aparsın.
         // Sıfıra bölmə halında xəbərdarlıq çıxarsın.(swich-case)
 
 
