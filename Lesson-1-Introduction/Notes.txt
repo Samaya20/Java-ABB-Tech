@@ -56,6 +56,24 @@ Sürəti zəifdir çünki datalara referans adreslər üzərindən dolayı yol i
 
 --------- Primitive və Reference type-ların fərqi nədir? ------------
 
+Primitive type-lar static dataları saxlamaq üçün istifadə edilir. Onların obyekti olmur, metodu olmur və null dəyəri ala bilmir. 
+Həmçinin collectionlar içərisində yazıla bilmir.
+
+Reference type-lar isə dynamic datalar üçün istifadə edilir.
+Özünün xüsusi metodları olur, yaddaşda adresi olur və obyekti yarana bilir. Null dəyəri ala bilir.
+Collectionlar içərisində istifadə oluna bilir.
+
+
+===============================================================================================================================================
+
+OOP-nin 3 əsas anlayışı nədir? Class və obyekt nədir?
+
+Fields - obyekt haqqında dataları saxlayan variable-lardır.
+Methods - obyektə aid işləri görən funksiyalar.
+İnstantiation - new keywordu ilə RAM-da hansısa classın obyektini yaratmaq.
+
+Class bir blueprintdir, yəni təyin olunmuş hazır bir şablon və ya strukturadır.
+Obyekt isə classdan yaranan, adresi olan state-lərdir. Classın bütün xüsusiyyətlərini özünə mənimsəyir.
 
 
 
