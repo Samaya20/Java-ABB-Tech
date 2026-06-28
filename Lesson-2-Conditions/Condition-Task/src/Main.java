@@ -54,6 +54,24 @@ public class Main {
 //            }
 //        }
 
+        
+        // Daha optimal versiya:
+
+          int n = 12;
+
+          if (n == 0){
+              System.out.print("Eded sifirdir");
+          } else {
+              if((n % 2) == 0){
+                  System.out.print("Eded cütdür");
+              } else {
+                  System.out.print("Eded tekdir");
+              }
+              String result = (n < 0) ? " ve menfidir." : " ve müsbetdir.";
+              System.out.print(result);
+          }
+
+
         // -----------------------------------------------
 
         // 4. int x = 10, y = 4; char op = '+'; — op dəyişəninə görə toplama, çıxma, vurma və bölmə əməliyyatı aparsın.
@@ -94,17 +112,17 @@ public class Main {
         // 5. int ay = 11; — ay nömrəsinə görə fəsli ("Yaz", "Yay", "Payız", "Qış") ekrana çıxarın.
         // Birdən çox case eyni nəticəyə aparmalıdır.(swich-case)
 
-        int ay = 7;
+        // int ay = 7;
 
-        String season = switch (ay) {
-            case 12, 1, 2 -> "Qış";
-            case 3, 4, 5 -> "Yaz";
-            case 6, 7, 8 -> "Yay";
-            case 9, 10, 11 -> "Payız";
-            default -> "Bele bir ay teyin olunmayib!";
-        };
+        // String season = switch (ay) {
+        //     case 12, 1, 2 -> "Qış";
+        //     case 3, 4, 5 -> "Yaz";
+        //     case 6, 7, 8 -> "Yay";
+        //     case 9, 10, 11 -> "Payız";
+        //     default -> "Bele bir ay teyin olunmayib!";
+        // };
 
-        System.out.println(season);
+        // System.out.println(season);
 
 
     }
