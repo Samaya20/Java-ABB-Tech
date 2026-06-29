@@ -1,0 +1,88 @@
+-------------- Javada Control Statements nədir? -----------------
+
+Control Statements - proqramın hansı hissəsinin, nə vaxt və neçə dəfə işləyəcəyinə qərar verən ifadələrdir.
+
+3 əsas növə bölünür:
+
+Selection Statements - Proqramın şərtlərə əsasən fərqli nəticələr qaytarmağı üçün yazılır.
+
+- Simple if - Yalnız şərt doğru olduğu zaman işləyir.
+- if else - Şərt doğru olanda if, əksi halda isə else bloku işləyir.
+- if else if - Birdən çox şərt yoxlamaq üçün yazılır.
+- switch - Hansısa bir dəyişənin dəyərini contant dəyərlərlə yoxlayır. Daha oxunaqlıdır. (meselen enumlarla işleye biler)
+
+Logical Statements - Birdən çox şərti birləşdirmək üçün yazılır.
+
+- && (AND) operatoru - Hər iki şərt true olarsa nəticəni true qaytarır.
+- || (OR) operatoru - Şərtlərdən biri true olarsa nəticəni true qaytarır.
+- ! (NOT) operatoru - Alınan nəticəni tərsinə çevirir.
+Əlavə qeyd : Short Circuit məntiqi ilə && operatorunda birinci tərəf false olsa ikinci tərəfi yoxlamağa vaxt sərf etmir, nəticə false qayıdır.
+
+
+İterative Statements - Verilmiş şərt ödənənə qədər hansısa kodu təkrar-təkrar icra eləmək üçün yazılır.
+
+- for - Dövrün təkrarlanma sayı əvvəlcədən bəlli olanda istifadə olunur.
+- while - İlk öncə şərti yoxlayır, nə qədər ki nəticə true qaytarırsa dövr işləyir.
+- do while - Dövrü 1 dəfə işə salır daha sonra şərti yoxlayır əgər true qaytarırsa işləməyə davam edir.
+- for-each - Collection-lar və array-lər üzərində gəzmək üçün istifadə olunur. Hansı ki biz bunu api-larda istifadə edəcəyik dataları çıxarmaq üçün.
+
+Jump Statements - Dövrlərin və metodların iş prinsipini dəyişmək üçündür.
+
+- break - Dövrü dayandırmaq üçündür.
+- continue - Dövrü növbəti addıma keçirmək üçündür.
+- return - Nəticə olaraq bir dəyər qaytarmaq üçündür.
+
+
+====================================================================================================================================
+
+---------------- Ternary və Unary Operators nədir? ------------------
+
+- Ternary Operator - if-else'in qısa variantıdır. Şərt əsasında bir dəyər qaytarır.
+- Unary Operator - dəyişənin dəyərini artırmaq və ya azaltmaq üçün yazılır.
+Pre increment (++ expr) - əvvəlcə dəyəri artırır sonra istifadə edir.
+Post increment (-- expr) - əvvəlcə azaldır sonra istifadə edir.
+
+
+=====================================================================================================================================
+
+---------------- Scanner class nədir? --------------------
+
+Scanner class - Klavituradan məlumat oxumaq üçün istifadə olunur.
+
+İş prinsipi odur ki:
+
+1. Klaviaturadan məlumat daxil edilib enter-ə click edirik.
+2. Daxil edilən məlumat buffer-a yəni RAM-da ayrılmış müvəqqəti bir sahəyə yazılır.
+3. Scanner isə buffer-dakı o məlumatı götürür bizim declare elədiyimiz dəyişənə yazır.
+4. Dəyişən də əgər primitive (int, double, boolean) tipdirsə stack-ə düşür. 
+Stringdirsə yaranan obyekt içindəki məlumatla birlikdə heap-ə düşür, dəyişən isə stack-a düşür və obyektin adresini saxlayır.
+
+Əlavə qeyd : nextInt(), nextDouble(), next() kimi metodlar token əsaslı metodlardır. 
+Yəni onlar boşluqları və enteri oxumurlar sadəcə real dəyəri götürürlər. Enter (\n) simvolu buffer-da qalmağa davam edir.
+nextLine() metodu isə enter-ə qədər hərşeyi oxuyur və enteri görəndə işinin bitdiyini başa düşür. 
+İşi bitdikdən sonra enteri silir. Buffer-ı təmizləyir və yeni məlumatı daxil etməyə hazır olur.
+Ona görə nextİnt() kimi metodlardan sonra 1 dəfə boş nextLine() metodunu çağırmaq lazımdı ki, bufferda qalan enteri silsin.
+Növbəti nextLine məlumatları oxuya bilsin, boş keçməsin.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Yasinizi daxil edin: ");
+        int yas = sc.nextInt();
+
+        sc.nextLine();
+
+        System.out.print("Adinizi daxil edin: ");
+        String ad = sc.nextLine();
+
+
+        System.out.println("Adiniz: " + ad + ", Yasiniz: " + yas);
+
+        sc.close();
+    }
+}
+
