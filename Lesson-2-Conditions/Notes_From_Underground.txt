@@ -9,6 +9,7 @@ Selection Statements - Proqramın şərtlərə əsasən fərqli nəticələr qay
 - Simple if - Yalnız şərt doğru olduğu zaman işləyir.
 - if else - Şərt doğru olanda if, əksi halda isə else bloku işləyir.
 - if else if - Birdən çox şərt yoxlamaq üçün yazılır.
+- nested if - İç-içə bir-birindən asılı olan şərtlər yazmaq üçün istifadə olunur.
 - switch - Hansısa bir dəyişənin dəyərini contant dəyərlərlə yoxlayır. Daha oxunaqlıdır. (meselen enumlarla işleye biler)
 
 Logical Statements - Birdən çox şərti birləşdirmək üçün yazılır.
