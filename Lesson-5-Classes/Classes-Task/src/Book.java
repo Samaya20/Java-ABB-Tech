@@ -5,10 +5,10 @@ public class Book {
     protected int totalCopies;
     protected int availableCopies;
 
-    public Book(String title1, String author1, String isbn1) {
-        title = title1;
-        author = author1;
-        isbn = isbn1;
+    public Book(String _title, String _author, String _isbn) {
+        title = _title;
+        author = _author;
+        isbn = _isbn;
         totalCopies = 1;
         availableCopies = 1;
     }
