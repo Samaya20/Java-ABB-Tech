@@ -42,7 +42,7 @@ public class Main {
 
         Files.writeString(
                 Paths.get("data/salary_report.txt"),
-                "Orta maas: " + average +
+                        "Orta maas: " + average +
                         "\n2000-den cox: " + highSalary +
                         "\nSiralama: " + sorted +
                         "\nEn yüksek maas: " + max +
