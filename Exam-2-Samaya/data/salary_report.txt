@@ -1,0 +1,6 @@
+Orta maas: {HR=1100.0, IT=2433.3333333333335, Marketing=1350.0}
+2000-den cox: [Employee@312b1dae, Employee@7530d0a]
+Siralama: [Employee@7530d0a, Employee@312b1dae, Employee@27bc2616, Employee@3941a79c, Employee@506e1b77, Employee@4fca772d]
+En yüksek maas: Optional[Employee@7530d0a]
+Adlar: Elvin, Aysel, Rəşad, Nərmin, Tural, Günel
+Şöbe sayi: {HR=1, IT=3, Marketing=2}
