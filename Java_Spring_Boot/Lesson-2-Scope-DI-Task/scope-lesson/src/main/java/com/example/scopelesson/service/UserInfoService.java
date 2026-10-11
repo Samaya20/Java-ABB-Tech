@@ -21,6 +21,7 @@ public class UserInfoService {
         this.userRepository = userRepository;
         this.userAuditLog = userAuditLog;
         this.requestContext = requestContext;
+        System.out.println("UserInfoService: " + this.hashCode() + " yaradildi");
     }
 
     public UserInfoResponse getUserById(Long id) {

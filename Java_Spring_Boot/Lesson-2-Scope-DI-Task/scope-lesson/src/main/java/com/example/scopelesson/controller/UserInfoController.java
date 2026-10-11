@@ -12,10 +12,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/user-info")
-@RequiredArgsConstructor
 public class UserInfoController {
     private final UserInfoService userInfoService;
     private final RecentlyViewedUsers recentlyViewedUsers;
+
+    public UserInfoController(UserInfoService userInfoService, RecentlyViewedUsers recentlyViewedUsers) {
+        this.userInfoService = userInfoService;
+        this.recentlyViewedUsers = recentlyViewedUsers;
+        System.out.println("UserInfoController: " + this.hashCode() + " yaradildi");
+    }
 
     @GetMapping("/{id}")
     public UserInfoResponse getUserById(@PathVariable Long id) {
