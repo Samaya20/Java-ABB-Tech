@@ -37,7 +37,7 @@ public class UserInfoService {
         return userRepository.getAllUsers();
     }
 
-    // Sual 12 - hər createUser-də yeni obyekt yaranmaği
+    // Sual 12 - hər createUser-də yeni obyekt yaranmasi
     public UserInfoResponse createUser(CreateUserRequest createUserRequest) {
         UserAuditLog auditLog = userAuditLogProvider.getObject();
         auditLog.setAction("CREATE_USER");
