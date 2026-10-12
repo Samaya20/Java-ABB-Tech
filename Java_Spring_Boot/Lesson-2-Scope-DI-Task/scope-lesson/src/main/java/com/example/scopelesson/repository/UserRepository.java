@@ -77,7 +77,7 @@ public class UserRepository {
     public UserInfoResponse getUserById(Long id) {
         UserInfoResponse user = storage.get(id);
 
-        if (user == null){
+        if (user == null) {
             throw new NoSuchElementException("Istifadeci tapilmadi. Id: " + id);
         }
         return user;
