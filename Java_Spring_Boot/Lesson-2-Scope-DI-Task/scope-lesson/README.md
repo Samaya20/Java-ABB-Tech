@@ -32,5 +32,32 @@ Tapşırıqdaki 8 ci sualın cavabı :
   1 Singleton obyekt eyni anda 100 fərqli thread tərəfindən istifadə edilə bilər.
   Məsələn proyektdə istifadə etdiyimiz User Repository.
 
+================================================================================================
 
- 
+--- Task-2: Prototype ---
+
+11-ci sualın nəticəsi:
+
+Səhv variant (Hər dəfə eyni obyekt create olur)
+
+<img width="967" height="567" alt="wrong-user-create" src="https://github.com/user-attachments/assets/1dc3adbc-2df7-409c-aa1b-77c9a5fb601e" />
+
+=====
+
+12-ci sualın nəticəsi:
+
+Düzgün variant (ObjectProvider ilə hər dəfə yeni obyekt yaranır)
+
+<img width="867" height="492" alt="correct-user-create" src="https://github.com/user-attachments/assets/fa49242f-2ee1-4d6e-a4a0-1132769a43ab" />
+
+=====
+
+13-cü sualın nəticəsi:
+
+Prototype bean avtomatik predestroy olunmur. Çünki əgər Spring Container yaradılan hər bir prototype bean-i
+destroy etmək üçün izləsəydi, yəni reference saxlasaydı,həmin bean-lər proqram işlədiyi müddətcə yaddaşdan silinməyəcəkdi.
+GC onları təmizləməyəcəkdi və OutofMemory error olacaqdı.
+
+<img width="911" height="690" alt="bean-destroy" src="https://github.com/user-attachments/assets/a88de255-86f9-4e87-a49e-51b6357d7f6a" />
+
+
