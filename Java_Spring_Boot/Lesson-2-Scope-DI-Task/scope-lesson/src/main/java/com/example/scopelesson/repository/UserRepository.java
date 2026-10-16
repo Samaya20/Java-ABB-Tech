@@ -2,6 +2,7 @@ package com.example.scopelesson.repository;
 
 import com.example.scopelesson.dto.request.CreateUserRequest;
 import com.example.scopelesson.dto.response.UserInfoResponse;
+import com.example.scopelesson.logging.RequestContext;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Repository;
@@ -25,8 +26,13 @@ public class UserRepository {
     // Sual 2 - Ardicil id ucun atomiclong
     private final AtomicLong idCounter = new AtomicLong(0);
 
+    private RequestContext requestContext;
+
     // Sual 6 - Konstruktor log
-    public UserRepository() {
+    public UserRepository(RequestContext requestContext) {
+        // Sual 15 - Request Context-i inject etmek
+        this.requestContext = requestContext;
+
         System.out.println("UserRepository: " + this.hashCode() + " yaradildi");
     }
 
@@ -80,6 +86,9 @@ public class UserRepository {
         if (user == null) {
             throw new NoSuchElementException("Istifadeci tapilmadi. Id: " + id);
         }
+        // Sual 16 - Request id log
+        System.out.println("Repository requestId: " + requestContext.getRequestId());
+
         return user;
     }
 

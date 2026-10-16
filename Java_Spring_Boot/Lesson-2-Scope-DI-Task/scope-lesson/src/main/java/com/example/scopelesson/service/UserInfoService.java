@@ -30,6 +30,10 @@ public class UserInfoService {
         UserAuditLog userAuditLogProvider = userAuditLog.getObject();
 //        System.out.println("AuditID" + userAuditLogProvider.getAuditId());
 //        System.out.println("TraceID" + requestContext.getTraceId());
+
+        // Sual 16 - Request id log
+        System.out.println("Service requestId: " + requestContext.getRequestId());
+
         return userRepository.getUserById(id);
     }
 

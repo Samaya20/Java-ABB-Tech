@@ -3,6 +3,7 @@ package com.example.scopelesson.controller;
 import com.example.scopelesson.dto.request.CreateUserRequest;
 import com.example.scopelesson.dto.response.UserInfoResponse;
 import com.example.scopelesson.logging.RecentlyViewedUsers;
+import com.example.scopelesson.logging.RequestContext;
 import com.example.scopelesson.service.UserInfoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,16 +16,29 @@ import java.util.List;
 public class UserInfoController {
     private final UserInfoService userInfoService;
     private final RecentlyViewedUsers recentlyViewedUsers;
+    private final RequestContext requestContext;
 
-    public UserInfoController(UserInfoService userInfoService, RecentlyViewedUsers recentlyViewedUsers) {
+    public UserInfoController(UserInfoService userInfoService, RecentlyViewedUsers recentlyViewedUsers, RequestContext requestContext) {
         this.userInfoService = userInfoService;
         this.recentlyViewedUsers = recentlyViewedUsers;
+        this.requestContext = requestContext;
         System.out.println("UserInfoController: " + this.hashCode() + " yaradildi");
     }
 
     @GetMapping("/{id}")
     public UserInfoResponse getUserById(@PathVariable Long id) {
+        // Sual 16 - Request id log
+        System.out.println("Controller requestId: " + requestContext.getRequestId());
+
+        // Sual 19 - Class adini gormek ucun
+        System.out.println("RequestContext class: " + requestContext.getClass());
+
         recentlyViewedUsers.addUser(id);
+
+        // Sual 17 - Sorğunun neçe millisaniye cekdiyini gormek
+        long duration = System.currentTimeMillis() - requestContext.getStartTime();
+        System.out.println("Request time: " + duration + "ms");
+
         return userInfoService.getUserById(id);
     }
 
