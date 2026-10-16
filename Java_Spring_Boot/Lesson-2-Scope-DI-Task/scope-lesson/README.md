@@ -170,5 +170,6 @@ Service-i field injection-a keçirdikde Spring-den kenarda new UserInfoService()
 33-cü sualın nəticəsi:
 List injection alındı, sistemde 2 repository olduğunu gösterir. Mock ve User
 <br>
+<br>
 <img width="1325" height="1032" alt="list-injection" src="https://github.com/user-attachments/assets/41d4d6ff-bcae-47ec-9fa8-54f494a1ead1" />
 
