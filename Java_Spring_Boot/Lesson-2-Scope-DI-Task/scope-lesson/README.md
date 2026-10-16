@@ -127,8 +127,9 @@ Bu siyahını request scope-da saxlasaydıq nə olardı?
 <br>
 --- Task-4: Session ---
 <br>
-
-27-ci sualın nəticəsi: <br>
+<br>
+27-ci sualın nəticəsi: 
+<br>
 2 dənə repository bean tapırdı, Mock və User repository. Hansını istifadə edəcəyini bilmirdi. NoUniqueBeanDefinitionException 
 <br>
 
@@ -136,9 +137,10 @@ Bu siyahını request scope-da saxlasaydıq nə olardı?
 <br>
 ==== <br>
 28-ci və 29-cu sualın nəticəsi:
+<br>
 
 @Primary və @Qualifier ilə həll yolu hər ikisindədə uğurlu oldu, nəticədə mock datalar qayıdır.
-<br>
+<br> <br>
 
 <img width="1477" height="667" alt="mock-user-success" src="https://github.com/user-attachments/assets/e7329fff-446b-4ce9-b56d-a17406fade92" />
 
@@ -147,12 +149,12 @@ Bu siyahını request scope-da saxlasaydıq nə olardı?
 ==== 
 <br>
 31-ci sualın nəticəsi:
-<br>
+<br> <br>
 Notification Service uğurlu alındı.Hər dəfə user /create olanda email vasitəsi ilə salamlayırıq.
 <br>
-
-<img width="1332" height="982" alt="create-welcome-service" src="https://github.com/user-attachments/assets/abaaccd3-8db4-4b8b-88e1-2607b4ce598c" />
 <br>
+<img width="1332" height="982" alt="create-welcome-service" src="https://github.com/user-attachments/assets/abaaccd3-8db4-4b8b-88e1-2607b4ce598c" />
+<br><br>
 ===
 <br>
 
