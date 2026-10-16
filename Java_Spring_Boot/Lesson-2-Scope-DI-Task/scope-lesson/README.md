@@ -32,7 +32,7 @@ Tapşırıqdaki 8 ci sualın cavabı :
   1 Singleton obyekt eyni anda 100 fərqli thread tərəfindən istifadə edilə bilər.
   Məsələn proyektdə istifadə etdiyimiz User Repository.
 
-================================================================================================
+===================================================================================
 
 --- Task-2: Prototype ---
 
@@ -60,7 +60,7 @@ GC onları təmizləməyəcəkdi və OutofMemory error olacaqdı.
 
 <img width="911" height="690" alt="bean-destroy" src="https://github.com/user-attachments/assets/a88de255-86f9-4e87-a49e-51b6357d7f6a" />
 
-================================================================================================
+===================================================================================
 
 --- Task-3: Request ---
 
@@ -81,7 +81,7 @@ Xətanın düzeldilmiş halı :
 
 ===========
 
-19-cu sual nəticəsi: 
+19-cu sualın nəticəsi: 
 
 Class adı olaraq RequestContext$$SpringCGLIB$$0 çıxır.
 
@@ -93,5 +93,36 @@ Singleton-a request bean necə inject oluna bilir?
 Çünki Spring bizim Singleton obyektlərimizin içinə əsl RequestContext obyektini yox, onun Proxy versiyasını inject edir.
 Ne vaxtki kenardan bir HTTP sorğusu gelir ve biz hemin proxy-nin metodunu çağırırıq, 
 proxy arxa planda o anki HTTP sorğusuna aid olan esl obyekti tapıb işi ona yönlendirir.
+
+
+===================================================================================
+
+--- Task-4: Session ---
+
+24-cü sualın nəticəsi : 
+
+Chrome-da id requestlər göndərdikdə recentdə görünür və userlərin tam məlumatı gəlir.
+Amma Postman-də recent request göndərdikdə boş gəlir. 
+Çünki Brauzerdə JSESSIONID adında cookie var və sessiya orda saxlanır. İncognito windowda yeni istifadəçi statusu yarandığı üçün sessiya boş qayıdır.
+Postman-də isə istəsək settingsdən cookie-ni aktivləşdirə bilərik.
+
+Chrome :
+<img width="815" height="611" alt="recent-success" src="https://github.com/user-attachments/assets/b3e4cb5b-d7d8-4bfd-89ac-c0485315be1b" />
+
+===
+Postman :
+
+<img width="1256" height="672" alt="recent-empty" src="https://github.com/user-attachments/assets/1ef469c6-5ffe-4730-8726-db545c89f49e" />
+
+======
+
+25-ci sualın cavabı:
+
+Bu siyahını request scope-da saxlasaydıq nə olardı?
+
+Əgər Request scope istifadə etsəydik recent məntiqi işləməyəcəkdi.Çünki biz 1-ci istifadəçiyə baxanda siyahı yaranacaqdı, içinə "1"i qoyub silinəcəkdi. Sonra /recent linkinə girəndə, həmin URL yeni bir HTTP sorğusu olduğu üçün təzə boş bir obyekt yaranacaqdı.
+
+
+
 
 
