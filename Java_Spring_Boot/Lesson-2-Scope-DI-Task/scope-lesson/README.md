@@ -106,10 +106,10 @@ Amma Postman-də recent request göndərdikdə boş gəlir.
 Çünki Brauzerdə JSESSIONID adında cookie var və sessiya orda saxlanır. İncognito windowda yeni istifadəçi statusu yarandığı üçün sessiya boş qayıdır.
 Postman-də isə istəsək settingsdən cookie-ni aktivləşdirə bilərik.
 <br> <br>
-Chrome : <br> 
+Chrome : <br>  <br>
 <img width="815" height="611" alt="recent-success" src="https://github.com/user-attachments/assets/b3e4cb5b-d7d8-4bfd-89ac-c0485315be1b" />
 
-=== <br> <br>
+=== <br>
 Postman : <br> <br>
 
 <img width="1256" height="672" alt="recent-empty" src="https://github.com/user-attachments/assets/1ef469c6-5ffe-4730-8726-db545c89f49e" />
