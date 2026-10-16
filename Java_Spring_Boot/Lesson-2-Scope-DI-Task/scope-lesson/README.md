@@ -122,7 +122,50 @@ Bu siyahını request scope-da saxlasaydıq nə olardı?
 
 Əgər Request scope istifadə etsəydik recent məntiqi işləməyəcəkdi.Çünki biz 1-ci istifadəçiyə baxanda siyahı yaranacaqdı, içinə "1"i qoyub silinəcəkdi. Sonra /recent linkinə girəndə, həmin URL yeni bir HTTP sorğusu olduğu üçün təzə boş bir obyekt yaranacaqdı.
 
+<br>
+===================================================================================
+<br>
+--- Task-4: Session ---
+<br>
 
+27-ci sualın nəticəsi: <br>
+2 dənə repository bean tapırdı, Mock və User repository. Hansını istifadə edəcəyini bilmirdi. NoUniqueBeanDefinitionException 
+<br>
 
+<img width="1382" height="1052" alt="bean-error" src="https://github.com/user-attachments/assets/ee957ef4-63a6-45ef-9e43-89505130aa0f" />
+<br>
+==== <br>
+28-ci və 29-cu sualın nəticəsi:
 
+@Primary və @Qualifier ilə həll yolu hər ikisindədə uğurlu oldu, nəticədə mock datalar qayıdır.
+<br>
+
+<img width="1477" height="667" alt="mock-user-success" src="https://github.com/user-attachments/assets/e7329fff-446b-4ce9-b56d-a17406fade92" />
+
+<br>
+
+==== 
+<br>
+31-ci sualın nəticəsi:
+<br>
+Notification Service uğurlu alındı.Hər dəfə user /create olanda email vasitəsi ilə salamlayırıq.
+<br>
+
+<img width="1332" height="982" alt="create-welcome-service" src="https://github.com/user-attachments/assets/abaaccd3-8db4-4b8b-88e1-2607b4ce598c" />
+<br>
+===
+<br>
+
+32-ci sualın cavabı:
+<br>
+Service-i field injection-a keçirdikde Spring-den kenarda new UserInfoService() yazaraq class-ın obyektini yaratmaq mümkün olmur.
+Çünki private fieldlərə kənardan deyer assign etmek üçün ne konstruktor, ne de setter metodu var.
+
+<br>
+===
+<br>
+33-cü sualın nəticəsi:
+List injection alındı, sistemde 2 repository olduğunu gösterir. Mock ve User
+
+<img width="1325" height="1032" alt="list-injection" src="https://github.com/user-attachments/assets/41d4d6ff-bcae-47ec-9fa8-54f494a1ead1" />
 
