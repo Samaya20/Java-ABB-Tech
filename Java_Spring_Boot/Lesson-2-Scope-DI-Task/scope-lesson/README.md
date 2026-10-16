@@ -130,9 +130,10 @@ Bu siyahını request scope-da saxlasaydıq nə olardı?
 <br>
 27-ci sualın nəticəsi: 
 <br>
+<br>
 2 dənə repository bean tapırdı, Mock və User repository. Hansını istifadə edəcəyini bilmirdi. NoUniqueBeanDefinitionException 
 <br>
-
+<br>
 <img width="1382" height="1052" alt="bean-error" src="https://github.com/user-attachments/assets/ee957ef4-63a6-45ef-9e43-89505130aa0f" />
 <br>
 ==== <br>
