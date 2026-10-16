@@ -2,9 +2,11 @@ package com.example.scopelesson.repository;
 
 import com.example.scopelesson.dto.request.CreateUserRequest;
 import com.example.scopelesson.dto.response.UserInfoResponse;
+import com.example.scopelesson.interfaces.UserRepository;
 import com.example.scopelesson.logging.RequestContext;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
@@ -13,11 +15,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
-public class UserRepository {
+
+
+// Sual 28 - NoUniqueBeanDefinitionException xetasinin Primary ile helli
+// @Primary
+
+public class InMemoryUserRepository implements UserRepository {
 
 
     // Sual 1 - Thread safe map
@@ -29,7 +35,7 @@ public class UserRepository {
     private RequestContext requestContext;
 
     // Sual 6 - Konstruktor log
-    public UserRepository(RequestContext requestContext) {
+    public InMemoryUserRepository(RequestContext requestContext) {
         // Sual 15 - Request Context-i inject etmek
         this.requestContext = requestContext;
 
