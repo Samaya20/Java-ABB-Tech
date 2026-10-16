@@ -15,12 +15,10 @@ import java.util.List;
 @RequestMapping("/api/v1/user-info")
 public class UserInfoController {
     private final UserInfoService userInfoService;
-    private final RecentlyViewedUsers recentlyViewedUsers;
     private final RequestContext requestContext;
 
-    public UserInfoController(UserInfoService userInfoService, RecentlyViewedUsers recentlyViewedUsers, RequestContext requestContext) {
+    public UserInfoController(UserInfoService userInfoService, RequestContext requestContext) {
         this.userInfoService = userInfoService;
-        this.recentlyViewedUsers = recentlyViewedUsers;
         this.requestContext = requestContext;
         System.out.println("UserInfoController: " + this.hashCode() + " yaradildi");
     }
@@ -32,8 +30,6 @@ public class UserInfoController {
 
         // Sual 19 - Class adini gormek ucun
         System.out.println("RequestContext class: " + requestContext.getClass());
-
-        recentlyViewedUsers.addUser(id);
 
         // Sual 17 - Sorğunun neçe millisaniye cekdiyini gormek
         long duration = System.currentTimeMillis() - requestContext.getStartTime();
@@ -54,8 +50,8 @@ public class UserInfoController {
     }
 
     @GetMapping("/recent")
-    public List<Long> getUserIdsRecent() {
-        return recentlyViewedUsers.getUsers();
+    public List<UserInfoResponse> getUserIdsRecent() {
+        return userInfoService.getRecentUsers();
     }
 
 }

@@ -40,21 +40,21 @@ public class UserRepository {
     @PostConstruct
     public void initializeUser() {
         saveUser(new UserInfoResponse(
-                idCounter.incrementAndGet(),
+                0L,
                 "Ruslan",
                 "ruslan@example.com",
                 true,
                 LocalDateTime.now()
         ));
         saveUser(new UserInfoResponse(
-                idCounter.incrementAndGet(),
+                0L,
                 "Samaya",
                 "samaya@example.com",
                 true,
                 LocalDateTime.now()
         ));
         saveUser(new UserInfoResponse(
-                idCounter.incrementAndGet(),
+                0L,
                 "TestUser",
                 "testuser@example.com",
                 true,

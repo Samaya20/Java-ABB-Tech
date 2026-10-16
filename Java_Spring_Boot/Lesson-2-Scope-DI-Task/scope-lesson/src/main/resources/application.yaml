@@ -1,3 +1,9 @@
 spring:
   application:
     name: scope-lesson
+
+#    Sual 23 - Session müddetini 1 deqiqeye endirmek
+server:
+  servlet:
+    session:
+      timeout: 1m

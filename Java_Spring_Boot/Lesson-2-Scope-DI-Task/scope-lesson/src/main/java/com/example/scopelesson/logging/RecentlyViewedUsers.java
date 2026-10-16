@@ -7,6 +7,7 @@ import org.springframework.web.context.annotation.SessionScope;
 import java.util.ArrayList;
 import java.util.List;
 
+// Sual 20 - RecentlyViewedUsers classının yaradılması
 @Getter
 @Component
 @SessionScope
