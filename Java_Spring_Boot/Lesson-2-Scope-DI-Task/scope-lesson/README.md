@@ -60,4 +60,38 @@ GC onları təmizləməyəcəkdi və OutofMemory error olacaqdı.
 
 <img width="911" height="690" alt="bean-destroy" src="https://github.com/user-attachments/assets/a88de255-86f9-4e87-a49e-51b6357d7f6a" />
 
+================================================================================================
+
+--- Task-3: Request ---
+
+18-ci sualın nəticəsi :
+
+@Scope("request") annotation yazanda ScopeNotActiveException alırıq. 
+Çünki proyekt qalxanda Spring Singleton bean-ləri (Controller, Service) yaradır, 
+amma o anda heç bir aktiv HTTP sorgusu olmadigi ucun Request scope Bean-i yarada bilmir.
+
+
+<img width="1257" height="1007" alt="error-request-scope" src="https://github.com/user-attachments/assets/5524d56c-d948-46ab-8af8-f720ca5c46a5" />
+
+==
+
+Xətanın düzeldilmiş halı :
+
+<img width="1292" height="1050" alt="correct-reuqest-mode" src="https://github.com/user-attachments/assets/904f2ebb-88a9-4988-8e34-0f985c36485f" />
+
+===========
+
+19-cu sual nəticəsi: 
+
+Class adı olaraq RequestContext$$SpringCGLIB$$0 çıxır.
+
+<img width="1290" height="885" alt="class-name" src="https://github.com/user-attachments/assets/258c92cd-d6b3-4285-8b45-7a1e38ff08b9" />
+
+
+Singleton-a request bean necə inject oluna bilir?
+
+Çünki Spring bizim Singleton obyektlərimizin içinə əsl RequestContext obyektini yox, onun Proxy versiyasını inject edir.
+Ne vaxtki kenardan bir HTTP sorğusu gelir ve biz hemin proxy-nin metodunu çağırırıq, 
+proxy arxa planda o anki HTTP sorğusuna aid olan esl obyekti tapıb işi ona yönlendirir.
+
 
