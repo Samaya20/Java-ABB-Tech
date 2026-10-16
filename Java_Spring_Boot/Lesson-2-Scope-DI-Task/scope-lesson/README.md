@@ -149,12 +149,13 @@ Bu siyahını request scope-da saxlasaydıq nə olardı?
 ==== 
 <br>
 31-ci sualın nəticəsi:
-<br> <br>
+<br><br>
 Notification Service uğurlu alındı.Hər dəfə user /create olanda email vasitəsi ilə salamlayırıq.
 <br>
 <br>
 <img width="1332" height="982" alt="create-welcome-service" src="https://github.com/user-attachments/assets/abaaccd3-8db4-4b8b-88e1-2607b4ce598c" />
 <br><br>
+
 ===
 <br>
 
@@ -168,6 +169,6 @@ Service-i field injection-a keçirdikde Spring-den kenarda new UserInfoService()
 <br>
 33-cü sualın nəticəsi:
 List injection alındı, sistemde 2 repository olduğunu gösterir. Mock ve User
-
+<br>
 <img width="1325" height="1032" alt="list-injection" src="https://github.com/user-attachments/assets/41d4d6ff-bcae-47ec-9fa8-54f494a1ead1" />
 
